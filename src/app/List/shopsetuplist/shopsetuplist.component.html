@@ -1,0 +1,47 @@
+
+<div class="container mb-5">
+  
+    <button (click)="onclick()" [routerLink]="['/form']" routerLinkActive="active-link" ><i class="bi bi-patch-plus-fill"></i>&nbsp; Add Shop
+    </button>
+    <button class="edit"><i class="bi bi-pencil-square"></i>&nbsp;Edit Shop</button>
+    <button class="delete"><i class="bi bi-trash3"></i>&nbsp;Delete Shop</button>
+    <button class="refresh"><i class="bi bi-arrow-clockwise"></i>&nbsp;Refresh</button>
+    <button class="close"><i class="bi bi-x-square"></i>&nbsp;Close</button>
+
+    
+    <table class="table mt-3 " style="width: 116%; ">
+     
+        <thead>
+            <tr >
+            <th>ID</th>
+            <th>Shop Name</th>
+            <th>UnitNo</th>
+            <th>Contact Person</th>
+            <th>Phone</th>
+            <th>Property Name</th>
+            <th>Created By</th>
+            <th>Approved By</th>
+            <th>Remark</th>
+        </tr></thead>
+
+        <tbody>
+            <tr *ngFor="let Shopsetup of Shopsetup">
+                <td>{{Shopsetup.id}}</td>
+                <td>{{Shopsetup.name}}</td>
+                <td>{{Shopsetup.unitNo}}</td>
+                <td>{{Shopsetup.contactPerson}}</td>
+                <td>{{Shopsetup.phone}}</td>
+                <td>{{Shopsetup.propertyName}}</td>               
+                <td>{{Shopsetup.createdBy}}</td>
+                <td>{{Shopsetup.approvedBy}}</td>
+                <td>{{Shopsetup.remark}}</td>
+            </tr>
+        </tbody>
+   
+    </table>
+</div>
+
+
+<p *ngIf="!Shopsetup">No Members Found</p>
+
+
